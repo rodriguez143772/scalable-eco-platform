@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+      target: production
+    expose:
+      - "3000"
+
+  nginx:
+    build:
+      context: .
+      target: nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - app

@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      target: base
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "127.0.0.1:5173:5173"
+      - "127.0.0.1:3000:3000"
+    environment:
+      - VITE_SERVER_URL=http://localhost:3000
+    command: bun run dev
