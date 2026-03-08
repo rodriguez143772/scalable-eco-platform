@@ -4,7 +4,7 @@ import { hcWithType } from "server/client";
 import beaver from "@/assets/beaver.svg";
 import { Button } from "@/components/ui/button";
 
-const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:3000";
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || "/api";
 
 const client = hcWithType(SERVER_URL);
 
