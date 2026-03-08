@@ -19,4 +19,7 @@ export const app = new Hono()
 	return c.json(data, { status: 200 });
 });
 
-export default app;
+export default {
+  port: process.env.PORT || 3000,
+  fetch: app.fetch,
+};
